@@ -180,6 +180,8 @@ nav {
 			perspective: 800px;
 			border-radius: 15px;
 			border: none;
+			background-color: rgb(230, 230, 230);
+			cursor: pointer;
 		}
 
 		.img {
@@ -234,11 +236,16 @@ nav {
 
 		.text-two {
 			transform: rotateY(-180deg);
-			opacity: 0;
 		}
 		.card:hover .text {
 			transform: rotate(0);
 			opacity: 1;
+		}
+		.card:hover .one,
+		.card:hover .two,
+		.card:hover .three {
+			transform: rotateY(180deg);
+			opacity: 0;
 		}
 	}
 }
