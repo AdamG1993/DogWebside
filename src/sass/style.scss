@@ -1,0 +1,357 @@
+@import 'colors';
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+body {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	background-color: $green;
+}
+//global
+.hero-shadow {
+	position: relative;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(15, 14, 14, 0.7);
+	z-index: -1;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+.title {
+	display: flex;
+	justify-content: center;
+	padding: 1em 0;
+	font-size: 5rem;
+	text-transform: uppercase;
+}
+
+//navigation
+nav {
+	position: sticky;
+	background-color: $grey;
+	color: $white;
+	.container {
+		display: flex;
+		align-items: stretch;
+		z-index: 9999;
+		.navbar-brand {
+			font-size: 4rem;
+			letter-spacing: 2px;
+			color: $white;
+			font-family: 'Mouse Memoirs', sans-serif;
+			i {
+				color: $green;
+				font-size: 4rem;
+			}
+		}
+		.navbar-nav {
+			text-transform: uppercase;
+		}
+		.btn-bar {
+			color: $white;
+			font-size: 2rem;
+			padding: 0.5em 1em;
+			border: 1px solid $white;
+			border-radius: 5px;
+		}
+		.btn-bar:hover {
+			background-color: $green;
+			color: $grey;
+			border: none;
+		}
+	}
+	.collapse {
+		.navbar-nav {
+			a {
+				font-size: 2rem;
+				color: $green;
+				margin-right: 1em;
+				transition: color 0.3s;
+			}
+			a:hover,
+			.active {
+				color: $white;
+			}
+			.active {
+				display: flex;
+				justify-self: center;
+				align-items: center;
+			}
+		}
+	}
+}
+//header
+
+.hero-img {
+	position: relative;
+	width: 100%;
+	height: 560px;
+	background-image: url('../img/bruce-warrington-WSAOGHKEqFc-unsplash.jpg');
+	background-size: cover;
+	background-position-y: 20%;
+	background-position-x: center;
+	z-index: 0;
+	.hero-text {
+		position: absolute;
+		display: block;
+		top: 60%;
+		left: 10%;
+		margin: 0 2em;
+
+		h1 {
+			font-weight: bold;
+			font-size: 5rem;
+			color: #fff;
+			span {
+				color: $green;
+			}
+		}
+		p {
+			font-weight: bold;
+			font-size: 3rem;
+			padding: 2rem 0;
+			color: rgb(230, 230, 230);
+		}
+	}
+}
+//aboutus
+.aboutus {
+	padding-top: 4em;
+	margin-bottom: 10em;
+	.aboutus-box {
+		display: flex;
+		flex-direction: column;
+		padding: 0 1em;
+		width: 100%;
+		img {
+			align-items: center;
+			width: 100%;
+			height: auto;
+			max-width: 550px;
+			background-position-y: 100%;
+			clip-path: circle(50% at 50% 50%);
+		}
+	}
+	.aboutus-text {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		padding: 2em 2em;
+		h3 {
+			font-size: 2.2rem;
+			text-align: start;
+			font-weight: bold;
+			margin: 1em 0;
+		}
+		p {
+			font-size: 1.7rem;
+			color: $grey;
+		}
+	}
+}
+//price
+.price {
+	position: relative;
+	padding: 4em;
+	background-color: rgb(230, 230, 230);
+	.card-box {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 100px;
+		padding: 1em 2em;
+		margin-bottom: 5em;
+		.card {
+			margin: 2em 1em;
+			width: 300px;
+			height: 400px;
+			perspective: 800px;
+			border-radius: 15px;
+			border: none;
+		}
+
+		.img {
+			width: 100%;
+			height: 100%;
+			background-position: center;
+			background-size: cover;
+			border-radius: 15px;
+			transition: 0.8s;
+		}
+
+		.one {
+			background-image: $second-gradient, url('../img/posluszenstwo.jpg');
+		}
+		.two {
+			background-image: $second-gradient, url('../img/german-shepherd-ged57ab147_640.jpg');
+		}
+		.three {
+			background-image: $second-gradient, url('../img/damczurcombat.jpg');
+		}
+		.text {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			padding: 0 3em;
+			text-align: center;
+			color: $white;
+			border-radius: 15px;
+			background-image: linear-gradient(315deg, rgb(49, 49, 49) 0%, rgb(22, 22, 22) 74%);
+			transition: 0.8s;
+			opacity: 0;
+		}
+		h3 {
+			align-items: center;
+			font-size: 2.4rem;
+			margin-top: 2em;
+			margin-bottom: 1em;
+		}
+		p {
+			font-size: 1.6rem;
+			margin-bottom: 2em;
+		}
+		.price-card {
+			margin-top: 3em;
+			padding: 0.2em 2em;
+			background-color: $grey;
+			border-radius: 15px;
+			font-size: 2rem;
+		}
+
+		.text-two {
+			transform: rotateY(-180deg);
+			opacity: 0;
+		}
+		.card:hover .text {
+			transform: rotate(0);
+			opacity: 1;
+		}
+	}
+}
+//contact
+.contact {
+	padding-top: 4em;
+	margin-bottom: 10em;
+	.wrapper {
+		.contact-box {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 0 2em;
+			text-align: center;
+			.map-box {
+				width: 100%;
+				margin-bottom: 4em;
+				.map {
+					width: 100%;
+					height: 400px;
+				}
+			}
+			.contact-text {
+				h3 {
+					padding-top: 0.5em;
+					font-size: 2.2rem;
+				}
+				p {
+					font-size: 1.6rem;
+				}
+				.contact-media {
+					a {
+						padding: 0 0.1em;
+						font-size: 5rem;
+						color: $grey;
+						transition: color 0.3s;
+					}
+					a:hover {
+						color: rgb(34, 34, 34);
+					}
+				}
+			}
+		}
+	}
+}
+//footer
+footer {
+	background-color: $grey;
+	color: $green;
+	padding-top: 2em;
+	.foot-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-transform: capitalize;
+		.box-left {
+			width: 80%;
+			h3 {
+				font-size: 2rem;
+				text-align: center;
+				font-weight: bold;
+			}
+			label {
+				font-size: 1.4rem;
+			}
+			input {
+				width: 100%;
+				padding: 0.5em 2em;
+			}
+			textarea {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+		.btn-send {
+			margin-top: 0.5em;
+			background-color: $green;
+			border: 0;
+			padding: 10px 20px;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: $grey;
+			transition: background-color 0.3s;
+		}
+		.btn-send:hover {
+			background-color: $white;
+		}
+		.box-right {
+			display: none;
+		}
+	}
+	.copy {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2em;
+		background-color: rgb(39, 39, 39);
+		padding: 1em 0;
+		text-align: center;
+		color: $white;
+		p {
+			text-transform: capitalize;
+			font-size: 1.4rem;
+			font-weight: lighter;
+		}
+	}
+}
+.kenburns-top {
+	-webkit-animation: kenburns-top 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	animation: kenburns-top 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@import 'small.scss';
+@import 'medium.scss';
+@import 'large.scss';

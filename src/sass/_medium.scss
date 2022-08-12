@@ -1,0 +1,116 @@
+@media (min-width: 768px) {
+	.aboutus {
+		.aboutus-box {
+			flex-direction: row;
+			align-items: center;
+			margin: 2em 0;
+		}
+		.aboutus-text {
+			width: 50%;
+			flex-direction: column;
+			h3 {
+				font-size: 2rem;
+				font-weight: bold;
+				margin-bottom: 2em;
+			}
+			p {
+				font-size: 1.6rem;
+			}
+		}
+	}
+	.price {
+		.card-box {
+			flex-direction: row;
+			.card {
+				margin: 1em 1em;
+				width: 200px;
+				height: 300px;
+
+				h3 {
+					font-size: 1.6rem;
+				}
+				p {
+					font-size: 1.2rem;
+				}
+				.price-card {
+					margin-top: 0.2em;
+					padding: 0.5em 0.5em;
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+	.contact {
+		.wrapper {
+			.contact-box {
+				flex-direction: row;
+				align-items: center;
+				.map-box {
+					width: 50%;
+					margin-right: 5em;
+					.map {
+						margin-bottom: 2em;
+					}
+				}
+				h3 {
+					padding: 0.2em 0;
+					font-size: 3.2rem;
+				}
+				p {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+	.footer {
+		.foot-box {
+			flex-direction: row;
+
+			.box-left {
+				width: 40%;
+				margin-right: 2em;
+				padding-right: 3em;
+			}
+			.box-right {
+				flex-direction: column;
+				width: 40%;
+				display: flex;
+				text-align: center;
+				hr {
+					display: flex;
+					width: 60%;
+					align-self: center;
+				}
+				.links {
+					h3 {
+						font-size: 2.5rem;
+						margin-bottom: 1em;
+					}
+					a {
+						font-size: 1.8rem;
+						transition: color 0.3s;
+					}
+					a:hover {
+						color: #fff;
+					}
+				}
+				.footer-media {
+					h3 {
+						font-size: 2.5rem;
+						margin-bottom: 0.5em;
+					}
+					a {
+						text-decoration: none;
+						color: $green;
+						font-size: 4rem;
+						padding: 0 0.1em;
+						transition: color 0.3s;
+					}
+					a:hover {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
