@@ -35,61 +35,53 @@ body {
 	text-transform: uppercase;
 }
 
-//navigation
 nav {
-	position: sticky;
+	z-index: 99999;
 	background-color: $grey;
-	color: $white;
 	.container {
-		display: flex;
-		align-items: stretch;
-		z-index: 9999;
-		.navbar-brand {
-			font-size: 4rem;
-			letter-spacing: 2px;
-			color: $white;
-			font-family: 'Mouse Memoirs', sans-serif;
-			i {
-				color: $green;
-				font-size: 4rem;
-			}
-		}
 		.navbar-nav {
-			text-transform: uppercase;
-		}
-		.btn-bar {
-			color: $white;
-			font-size: 2rem;
-			padding: 0.5em 1em;
-			border: 1px solid $white;
-			border-radius: 5px;
-		}
-		.btn-bar:hover {
-			background-color: $green;
-			color: $grey;
-			border: none;
-		}
-	}
-	.collapse {
-		.navbar-nav {
-			a {
-				font-size: 2rem;
-				color: $green;
-				margin-right: 1em;
-				transition: color 0.3s;
-			}
-			a:hover,
+			background-color: $grey;
 			.active {
 				color: $white;
 			}
-			.active {
-				display: flex;
-				justify-self: center;
-				align-items: center;
+		}
+
+		a.nav-link {
+			font-size: 2rem;
+			text-transform: uppercase;
+			color: $green;
+		}
+		a.nav-link {
+			:active {
+				color: $white;
+				background-color: $grey;
 			}
+		}
+		a.navbar-brand:hover,
+		a.nav-link:hover {
+			color: $white;
+		}
+		a.navbar-brand {
+			font-family: 'Mouse Memoirs', sans-serif;
+			font-size: 3.5rem;
+			color: $white;
+			font-weight: bold;
+			i {
+				color: $green;
+			}
+		}
+
+		.fa-bars {
+			border: none;
+			padding: 0.2em;
+			font-size: 2rem;
+			color: $white;
 		}
 	}
 }
+
+//navigation
+
 //header
 
 .hero-img {
@@ -190,7 +182,7 @@ nav {
 			background-position: center;
 			background-size: cover;
 			border-radius: 15px;
-			transition: 0.8s;
+			transition: 1.2s;
 		}
 
 		.one {
@@ -213,7 +205,7 @@ nav {
 			color: $white;
 			border-radius: 15px;
 			background-image: linear-gradient(315deg, rgb(49, 49, 49) 0%, rgb(22, 22, 22) 74%);
-			transition: 0.8s;
+			transition: 1.2s;
 			opacity: 0;
 		}
 		h3 {
